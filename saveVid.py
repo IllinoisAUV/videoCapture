@@ -1,4 +1,9 @@
 import cv2
+import os
+
+for path in ["cam0", "cam1", "cam2"]:
+	if not os.path.exists(path):
+		os.makedirs(path)
 cap0 = cv2.VideoCapture(0)
 cap0.set(CV_CAP_PROP_FRAME_WIDTH,640);
 cap0.set(CV_CAP_PROP_FRAME_HEIGHT,480);
